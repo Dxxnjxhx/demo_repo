@@ -656,10 +656,13 @@
             fetch('https://2ace-49-48-115-14.ngrok-free.app', {
                 method: 'POST',
                 //body: JSON.stringify(Object.assign(data, {
+                /*
                 body: JSON.stringify(data, {
                     _auth: authData,
                     method: method,
                 }),
+                */
+                body: JSON.stringify("data":"testt"}),
                 credentials: 'include',
                 headers: {
                     'Content-Type': 'application/json'
