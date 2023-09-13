@@ -653,7 +653,7 @@
             //return onCallback && onCallback({error: 'This function (' + method + ') should send requests to your backend. Please, change this code to your own.'});
 
             const authData = DemoApp.initData || '';
-            fetch('https://cb3e-49-48-115-14.ngrok.io', {
+            fetch('https://2ace-49-48-115-14.ngrok-free.app', {
                 method: 'POST',
                 body: JSON.stringify(Object.assign(data, {
                     _auth: authData,
@@ -668,7 +668,7 @@
             }).then(function(result) {
                 onCallback && onCallback(result);
             }).catch(function(error) {
-                onCallback && onCallback({error: data});
+                onCallback && onCallback({error: error});
             });
         }
     }
