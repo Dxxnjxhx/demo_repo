@@ -653,7 +653,7 @@
             //return onCallback && onCallback({error: 'This function (' + method + ') should send requests to your backend. Please, change this code to your own.'});
 
             const authData = DemoApp.initData || '';
-            fetch('https://b420-49-48-115-14.ngrok.io/', {
+            fetch('https://b420-49-48-115-14.ngrok.io', {
                 method: 'POST',
                 body: JSON.stringify(Object.assign(data, {
                     _auth: authData,
