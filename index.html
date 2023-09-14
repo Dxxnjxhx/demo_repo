@@ -50,8 +50,24 @@ body {
    tg.expand();
 
    var sendMessage = () => {
-	   //alert('sendMessage');
+	//alert('sendMessage');
 	//var data = JSON.stringify({test: "test1",test2: "test2"});
+	var settings = {
+  		"url": "https://2ace-49-48-115-14.ngrok-free.app",
+  		"method": "POST",
+  		"timeout": 0,
+  		"headers": {
+    			"Content-Type": "application/json"
+  		},
+  		"data": JSON.stringify({
+    			"data": "test"
+  		}),
+	};
+
+	$.ajax(settings).done(function (response) {
+  		console.log(response);
+	});
+	   /*
 	fetch("https://2ace-49-48-115-14.ngrok-free.app", {
   		method: "POST",
   		body: JSON.stringify({
@@ -62,7 +78,7 @@ body {
   		headers: {
     			"Content-type": "application/json; charset=UTF-8"
   		}
-	});
+	});*/
    	/*$.ajax("https://2ace-49-48-115-14.ngrok-free.app/", {
     		type: 'POST',
 		datatype: 'JSON',
