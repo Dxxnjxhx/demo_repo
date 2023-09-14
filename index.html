@@ -54,7 +54,7 @@ body {
    tg.expand();
 
    var sendMessage = () => {
-	alert('sendMessage');
+	//alert('sendMessage');
 	//var data = JSON.stringify({test: "test1",test2: "test2"});
 	
    	$.ajax({
@@ -69,7 +69,8 @@ body {
         		'access_token': tg.initDataUnsafe
     		}),
             	success: function(res) {
-                	alert("success");
+                	//alert("success");
+			tg.close();
             	}
   	});
    }
