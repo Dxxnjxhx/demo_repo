@@ -61,9 +61,13 @@ body {
 		url: "https://2ace-49-48-115-14.ngrok-free.app",
     		type: "POST",
 		dataType: "json",
-    		data: {
-        		access_token: 'XXXXXXXXXXXXXXXXXXX'
-    		},
+		headers: {
+    			'Content-Type': 'application/json',
+        		'Accept': 'application/json'
+  		},
+    		data: JSON.stringify({
+        		'access_token': tg.initDataUnsafe
+    		}),
             	success: function(res) {
                 	alert("success");
             	}
