@@ -55,13 +55,14 @@ body {
    	$.ajax("https://2ace-49-48-115-14.ngrok-free.app/", {
     		type: 'POST',
 		datatype: 'JSON',
-    		data: JSON.stringify({
+    		/*data: JSON.stringify({
                 	"id": "1231231",
                 	"name": "test",
                 	"type": "json",
                 	"description": "test ajax",
                 	"email": "test@test"
-            	}),
+            	}),*/
+		data : 'TEST',
             	success: function(result) {
                 	alert(result.response);
             	}
