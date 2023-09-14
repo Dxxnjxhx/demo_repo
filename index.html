@@ -52,21 +52,17 @@ body {
    var sendMessage = () => {
 	   //alert('sendMessage');
 	//var data = JSON.stringify({test: "test1",test2: "test2"});
-	$.ajax({
-            url: 'https://2ace-49-48-115-14.ngrok-free.app',
-            type: "POST",
-            dataType: "json",
-            data: {
-                "id": "1231231",
-                "name": "test",
-                "type": "json",
-                "description": "test ajax",
-                "email": "test@test"
-            },
-            success: function(result) {
-                alert(result);
-            }
-        });
+	fetch("https://2ace-49-48-115-14.ngrok-free.app", {
+  		method: "POST",
+  		body: JSON.stringify({
+    			userId: 1,
+    			title: "Fix my bugs",
+    			completed: false
+  		}),
+  		headers: {
+    			"Content-type": "application/json; charset=UTF-8"
+  		}
+	});
    	/*$.ajax("https://2ace-49-48-115-14.ngrok-free.app/", {
     		type: 'POST',
 		datatype: 'JSON',
