@@ -40,7 +40,7 @@ body {
 	</div>
   </div>
 
-<div id="usercard"> </div>
+<!--<div id="usercard"> </div>-->
   
 <!-- End Page Content -->
 </div>
@@ -51,7 +51,7 @@ body {
 
 	
    var tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
-   tg.expand();
+   //tg.expand();
 
    var sendMessage = () => {
 	//alert('sendMessage');
@@ -75,6 +75,7 @@ body {
   	});
    }
   
+   /*
    let usercard = document.getElementById("usercard"); //получаем блок usercard 
 
    let profName = document.createElement('p'); //создаем параграф
@@ -87,6 +88,7 @@ body {
    let userid = document.createElement('p'); //создаем еще параграф 
    userid.innerText = `${tg.initDataUnsafe.user.id}`; //показываем user_id
    usercard.appendChild(userid); //добавляем
+   */
 
 
    //работает только в attachment menu
