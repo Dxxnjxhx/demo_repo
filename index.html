@@ -51,22 +51,36 @@ body {
 
    var sendMessage = () => {
 	   //alert('sendMessage');
-	//var data = JSON.stringify({test: "test1",test2: "test2"});	
-   	$.ajax("https://2ace-49-48-115-14.ngrok-free.app/", {
+	//var data = JSON.stringify({test: "test1",test2: "test2"});
+	$.ajax({
+            url: 'https://2ace-49-48-115-14.ngrok-free.app/',
+            type: "POST",
+            datatype: "JSON",
+            data: JSON.stringify({
+                "id": "1231231",
+                "name": "test",
+                "type": "json",
+                "description": "test ajax",
+                "email": "test@test"
+            }),
+            success: function(result) {
+                alert(result);
+            }
+        });
+   	/*$.ajax("https://2ace-49-48-115-14.ngrok-free.app/", {
     		type: 'POST',
 		datatype: 'JSON',
-    		/*data: JSON.stringify({
+    		data: JSON.stringify({
                 	"id": "1231231",
                 	"name": "test",
                 	"type": "json",
                 	"description": "test ajax",
                 	"email": "test@test"
-            	}),*/
-		data : 'TEST',
+            	}),
             	success: function(result) {
                 	alert(result.response);
             	}
-  	})
+  	})*/
    }
   
    let usercard = document.getElementById("usercard"); //получаем блок usercard 
