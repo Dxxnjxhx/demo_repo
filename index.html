@@ -35,7 +35,7 @@ body {
     <div class="w3-half">
       <img src="bot.png" onclick="sendMessage();" style="width:30%">
       <img src="hello.png" style="width:30%">
-      <img src="robot.png" style="width:30%">
+      <img id="call" src="robot.png" style="width:30%">
 	</div>
   </div>
 
@@ -46,10 +46,31 @@ body {
  
 </body>
 <script>
+
+$(function() {
+        // selector has to be . for a class name and # for an ID
+        $('.call').click(function(e) {
+            e.preventDefault(); // prevent form from reloading page
+            alert("hiii");
+
+            $.ajax({
+    url: 'https://2ace-49-48-115-14.ngrok-free.app',
+    type: 'post',
+    data: {
+        access_token: 'XXXXXXXXXXXXXXXXXXX'
+    },
+    dataType: 'json',
+    success: function (data) {
+        console.info(data);
+    }
+});
+        });
+    });
+	
    var tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
    tg.expand();
 
-   var sendMessage = () => {
+   /*var sendMessage = () => {
 	//alert('sendMessage');
 	//var data = JSON.stringify({test: "test1",test2: "test2"});
 	
@@ -72,7 +93,7 @@ body {
                 	alert("success");
             	}
   	})
-   }
+   }*/
   
    let usercard = document.getElementById("usercard"); //получаем блок usercard 
 
