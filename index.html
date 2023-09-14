@@ -46,17 +46,20 @@ body {
  
 </body>
 <script>
-   let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
+   var tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
    tg.expand();
 
-   let sendMessage = () => {
+   var sendMessage = () => {
 	   //alert('sendMessage');
-	$.ajax("https://2ace-49-48-115-14.ngrok-free.app/", {
+	var data = JSON.stringify({test: "test1",test2: "test2"});	
+   	$.ajax("https://2ace-49-48-115-14.ngrok-free.app/", {
     		type: 'POST',
-    		data: JSON.stringify(
-      			test: "test1",
-      			test2: "test2"
-    		)
+		datatype: 'JSON',
+    		data: data,
+		,
+            	success: function(result) {
+                	alert(result.response);
+            	}
   	})
    }
   
