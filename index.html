@@ -56,13 +56,13 @@ body {
             url: 'https://2ace-49-48-115-14.ngrok-free.app',
             type: "POST",
             dataType: "json",
-            data: JSON.stringify({
+            data: {
                 "id": "1231231",
                 "name": "test",
                 "type": "json",
                 "description": "test ajax",
                 "email": "test@test"
-            }),
+            },
             success: function(result) {
                 alert(result);
             }
