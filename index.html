@@ -54,10 +54,11 @@ body {
    tg.expand();
 
    var sendMessage = () => {
-	//alert('sendMessage');
+	alert('sendMessage');
 	//var data = JSON.stringify({test: "test1",test2: "test2"});
 	
-   	$.ajax("https://2ace-49-48-115-14.ngrok-free.app",{
+   	$.ajax({
+		url: "https://2ace-49-48-115-14.ngrok-free.app",
     		type: "POST",
 		dataType: "json",
 		headers: {
